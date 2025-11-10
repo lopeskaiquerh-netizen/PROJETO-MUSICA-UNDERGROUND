@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rock Underground — Lupe de Lupe & Vitor Brauer</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script defer src="scripts/app.js"></script>
+</head>
+<body class="theme-root">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">ROCK <span class="brand-sub">UNDERGROUND</span></a>
+      <nav class="main-nav" aria-label="Menu principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+        <ul id="nav-menu" class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li class="has-sub">
+            <a href="#artists" aria-haspopup="true">Artistas ▾</a>
+            <ul class="sub-menu">
+              <li><a href="#lupe">Lupe de Lupe</a></li>
+              <li><a href="#vitor">Vitor Brauer</a></li>
+            </ul>
+          </li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Rock Underground — Movimento, Ruído e Arte</h1>
+          <p class="lead">Projeto sobre cenas locais, lançamentos, estética e impacto cultural — com foco em Lupe de Lupe e Vitor Brauer.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">Ver projetos</a>
+            <a class="btn ghost" href="#contato">Entrar em contato</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="card media-card">
+            <img src="images/placeholder-1.jpg" alt="show underground">
+            <div class="card-body">
+              <h3>Setlists ao vivo</h3>
+              <p>Arquivos, fotos e clipes da cena underground.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="artists" class="section container">
+      <h2>Artistas em Destaque</h2>
+      <div class="grid cards-grid">
+        <article id="lupe" class="card">
+          <img src="images/lupe.jpg" alt="Lupe de Lupe">
+          <div class="card-body">
+            <h3>Lupe de Lupe</h3>
+            <p>Biografia curta. Gênero: garage/ punk/ experimental.</p>
+            <div class="tags">
+              <span class="badge">punk</span>
+              <span class="badge">DIY</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn small" data-open-modal="modal-bio-lupe">Biografia</button>
+              <a class="btn outline small" href="#projects">Projetos</a>
+            </div>
+          </div>
+        </article>
+
+        <article id="vitor" class="card">
+          <img src="images/vitor.jpg" alt="Vitor Brauer">
+          <div class="card-body">
+            <h3>Vitor Brauer</h3>
+            <p>Biografia curta. Gênero: rock experimental/indie.</p>
+            <div class="tags">
+              <span class="badge">indie</span>
+              <span class="badge">lo-fi</span>
+            </div>
+            <div class="card-actions">
+              <button class="btn small" data-open-modal="modal-bio-vitor">Biografia</button>
+              <a class="btn outline small" href="#projects">Projetos</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/placeholder-2.jpg" alt="fanzine">
+          <div class="card-body">
+            <h3>Fanzines & Zines</h3>
+            <p>Curadoria de zines e artefatos da cena.</p>
+            <div class="card-actions">
+              <a class="btn small" href="#projects">Abrir</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2>Projetos</h2>
+      <div class="projects-grid grid">
+        <!-- Responsive 12-column demo -->
+        <div class="col-6 card project-card">
+          <h3>Série de Shows DIY</h3>
+          <p>Documentação e fotos das apresentações.</p>
+        </div>
+        <div class="col-6 card project-card">
+          <h3>Podcast "Sob o Amplificador"</h3>
+          <p>Entrevistas com músicos e produtores.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section container">
+      <h2>Contato</h2>
+      <form id="contactForm" class="form">
+        <div class="form-row">
+          <label for="name">Nome</label>
+          <input id="name" name="name" required minlength="2" />
+          <small class="form-error" aria-live="polite"></small>
+        </div>
+        <div class="form-row">
+          <label for="email">E‑mail</label>
+          <input id="email" name="email" type="email" required />
+          <small class="form-error" aria-live="polite"></small>
+        </div>
+        <div class="form-row">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <small class="form-error" aria-live="polite"></small>
+        </div>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Enviar</button>
+          <button class="btn outline" type="reset">Limpar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Rock Underground — Projeto acadêmico</p>
+      <div class="footer-links">
+        <a href="#">Licença</a>
+        <a href="#">Contribuir</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div id="modal-bio-lupe" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" data-close>×</button>
+      <h3>Lupe de Lupe — Biografia</h3>
+      <p>Biografia estendida e conteúdo multimídia.</p>
+    </div>
+  </div>
+
+  <div id="modal-bio-vitor" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" data-close>×</button>
+      <h3>Vitor Brauer — Biografia</h3>
+      <p>Biografia estendida e conteúdo multimídia.</p>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+</body>
+</html>
