@@ -1,18 +1,13 @@
 /* Design System: CSS Variables */
 :root{
-  /* Color palette (8 cores mínimas) */
-  --color-primary-900: #0b0b0b;
-  --color-primary-700: #1f1f1f;
-  --color-primary-500: #3a3a3a;
-  --color-accent-500: #d7263d;
-  --color-accent-300: #ff6b6b;
-  --color-neutral-100: #f7f7f7;
-  --color-neutral-300: #e0e0e0;
-  --color-neutral-500: #bdbdbd;
-  --color-success: #29a745;
-  --color-warning: #ffb020;
-  --color-danger: #e53e3e;
-  --color-muted: #9a9a9a;
+  --color-primary-900: #0b0b0b;   /* Preto carvão */
+--color-primary-700: #1f1f1f;   /* Cinza grafite */
+--color-primary-500: #3a3a3a;   /* Cinza médio */
+--color-accent-500: #d7263d;    /* Vermelho rock */
+--color-accent-300: #ff6b6b;    /* Rosa intenso */
+--color-accent-100: #ffd6d6;    /* Rosa claro */
+--color-neutral-100: #f7f7f7;   /* Branco gelo */
+--color-neutral-500: #bdbdbd;   /* Cinza claro */
 
   /* Typography sizes (mínimo 5) */
   --font-size-xxl: 40px;
@@ -60,7 +55,20 @@ h3{font-size:var(--font-size-lg);margin:var(--space-2) 0}
 .nav-list .has-sub{position:relative}
 .sub-menu{position:absolute;left:0;top:110%;background:var(--color-primary-700);padding:var(--space-2);border-radius:6px;display:none;min-width:180px}
 .has-sub:hover .sub-menu{display:block}
-.sub-menu li{margin:0}
+.sub-menu li{margin:0} {
+  list-style: none;
+  position: relative;
+  padding-left: 16px;
+}
+
+.sub-menu li::before {
+  content: "•";
+  color: var(--color-accent-500);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 /* Hero */
 .hero{padding:var(--space-5) 0;background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2));color:var(--color-neutral-100)}
@@ -69,7 +77,12 @@ h3{font-size:var(--font-size-lg);margin:var(--space-2) 0}
 
 /* Grid utilities (12 columns) */
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--space-3)}
-.cards-grid{grid-template-columns:repeat(12,1fr)}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-4);
+  justify-items: center;
+}
 .card{background:var(--color-neutral-100);color:#111;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
 .card img{width:100%;display:block;height:200px;object-fit:cover}
 .card-body{padding:var(--space-2)}
